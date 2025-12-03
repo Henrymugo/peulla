@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brand Voice AI Copywriter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              'sans': ['Inter', 'sans-serif'],
+              'serif': ['Playfair Display', 'serif'],
+            },
+            colors: {
+              'brand-primary': '#C0A062', // Muted Gold
+              'brand-primary-hover': '#D4B67A',
+              'background-dark': '#121212',
+              'background-light': '#1A1A1A',
+              'border-color': '#333333',
+              'text-primary': '#F0F0F0',
+              'text-secondary': '#A0A0A0',
+            },
+            typography: (theme) => ({
+              invert: {
+                css: {
+                  '--tw-prose-body': theme('colors.text-secondary'),
+                  '--tw-prose-headings': theme('colors.text-primary'),
+                  '--tw-prose-lead': theme('colors.text-secondary'),
+                  '--tw-prose-links': theme('colors.brand-primary'),
+                  '--tw-prose-bold': theme('colors.text-primary'),
+                  '--tw-prose-counters': theme('colors.text-secondary'),
+                  '--tw-prose-bullets': theme('colors.brand-primary'),
+                  '--tw-prose-hr': theme('colors.border-color'),
+                  '--tw-prose-quotes': theme('colors.text-primary'),
+                  '--tw-prose-quote-borders': theme('colors.brand-primary'),
+                  '--tw-prose-captions': theme('colors.text-secondary'),
+                  '--tw-prose-code': theme('colors.text-primary'),
+                  '--tw-prose-pre-code': theme('colors.text-primary'),
+                  '--tw-prose-pre-bg': theme('colors.background-dark'),
+                  '--tw-prose-th-borders': theme('colors.border-color'),
+                  '--tw-prose-td-borders': theme('colors.border-color'),
+                  'h1, h2, h3, h4, h5, h6': {
+                    fontFamily: theme('fontFamily.serif').join(', '),
+                  },
+                },
+              },
+            }),
+          }
+        }
+      }
+    </script>
+    
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.24.0",
+    "react-markdown": "https://esm.sh/react-markdown@8.0.7",
+    "remark-gfm": "https://esm.sh/remark-gfm@3.0.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-background-dark text-text-primary font-sans">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
